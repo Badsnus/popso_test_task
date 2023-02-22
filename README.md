@@ -18,6 +18,8 @@ ___
 3).env.example -> .env
 
     И выставить там настройки
+    TELEGRAM_API_HASH и TELEGRAM_API_ID надо брать тут
+    https://my.telegram.org/apps
 
 4)Создать виртуальное окружение (ну если хотите)
 

@@ -1,7 +1,9 @@
 Демонстрация работы сайта
 ---
 ___
-В файле screencast.mkv
+В файле screencast.mkv 
+и здесь
+https://drive.google.com/file/d/1qX-kYVBhg8H05AQtQ-8rGmkztM4xAxME/view?usp=sharing
 
 Инструкция по использованию
 ---

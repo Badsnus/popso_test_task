@@ -14,6 +14,8 @@ DEBUG = os.getenv('DEBUG', 'OFF').lower() in ('on', 'yes', 'true')
 ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', '*').split(',')
 
 INSTALLED_APPS = [
+    'adminlte3',
+    'adminlte3_theme',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

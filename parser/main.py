@@ -70,7 +70,7 @@ async def main(api_id: int, api_hash: str, channels_for_parse: list[int], parse_
             async for message in app.get_chat_history(channel_id):
                 media_group_id = message.media_group_id
                 if str(message.media) == 'MessageMediaType.PHOTO':
-                    file_name = f'/media/{message.photo.file_id}.jpg'
+                    file_name = f'{message.photo.file_id}.jpg'
 
                     if media_group_id not in media_groups:
                         media_groups[media_group_id] = [file_name]
@@ -79,7 +79,7 @@ async def main(api_id: int, api_hash: str, channels_for_parse: list[int], parse_
 
                     await app.download_media(
                         message.photo.file_id,
-                        file_name=f'../news_site' + file_name
+                        file_name=f'../news_site/media/' + file_name
                     )
 
                 if message.caption or message.text:

@@ -119,6 +119,7 @@ my_account.session
 
 # mkdocs documentation
 /site
+media/
 
 # mypy
 .mypy_cache/

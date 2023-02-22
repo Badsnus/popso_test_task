@@ -20,13 +20,14 @@ class Post(models.Model):
     class Meta:
         verbose_name = 'пост'
         verbose_name_plural = 'посты'
+        ordering = ('date',)
 
     def __str__(self):
         return f'пост {self.pk}'
 
 
 class Image(models.Model):
-    post = models.ForeignKey(Post, verbose_name='пост', related_name='image', on_delete=models.CASCADE)
+    post = models.ForeignKey(Post, verbose_name='пост', related_name='images', on_delete=models.CASCADE)
     photo = models.ImageField('фото', upload_to='media/')
 
     class Meta:

@@ -1,5 +1,7 @@
 from django.db import models
 
+from news.managers import PostManager
+
 
 class Channel(models.Model):
     name = models.CharField('название', max_length=50)
@@ -16,6 +18,8 @@ class Post(models.Model):
     text = models.CharField('текст поста', max_length=4100)
     channel = models.ForeignKey(Channel, related_name='post', verbose_name='название канала', on_delete=models.CASCADE)
     date = models.DateTimeField('дата создания')
+
+    objects = PostManager()
 
     class Meta:
         verbose_name = 'пост'
